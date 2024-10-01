@@ -1,42 +1,263 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* margin: 0 auto; */
+  /* text-align: center; */
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* overflow: hidden; */
+}
+
+/* video background */
+.video-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.hero-overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75vw;
+  height: 25vh;
+  box-shadow: 0 0 0 9999px rgba(62, 31, 1, 0.824);
+  border-radius: 50%;
+
+  /* background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; */
+}
+
+/* General styles */
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.App {
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Header */
+.header {
+  background-color: #4e342e;
+  color: white;
+  padding: 50px 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.header h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin: 10px 0 0;
+  font-weight: 300;
+}
+
+/* Main content */
+.container {
+  width: 90%;
+  max-width: 1100px;
+}
+
+/* Intro section */
+.intro-background {
+  background-image: url(./assets/coffee-beans-img.jpeg);
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 4rem 0;
+  /* background-blend-mode: lighten; */
+  /* opacity: 0.6; */
+}
+
+.intro-image-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.intro-container {
+  padding: 1rem;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  color: #6d4c41;
+}
+
+.intro h2 {
+  font-size: 1.6rem;
+  margin-top: 4rem;
+  color: #6d4c41;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+/* Hours section */
+.hours {
+  margin-top: 3rem;
+}
+
+.hours h2 {
+  font-size: 1.6rem;
+  color: #6d4c41;
+}
+
+.hours ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 1rem;
+}
+
+.hours li {
+  margin: 5px 0;
+}
+
+.hours li > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Location section */
+.location {
+  margin-top: 3rem;
+}
+
+.location h2 {
+  font-size: 1.6rem;
+  color: #6d4c41;
+}
+
+.location p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-link {
+  text-decoration: none;
+  color: #ff7043;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.koko-brews-coffee-cup-img {
+  height: auto;
+}
+
+/* Why Koko section */
+.why-koko {
+  margin-top: 40px;
+}
+
+.why-koko h2 {
+  font-size: 1.8rem;
+  color: #6d4c41;
+}
+
+.why-koko ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.why-koko li {
+  margin: 5px 0;
+  padding: 5px;
+}
+
+/* Socials section */
+.socials {
+  margin-top: 40px;
+}
+
+.socials h2 {
+  font-size: 1.8rem;
+  color: #6d4c41;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #ff7043;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #4e342e;
+  color: white;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-overlay {
+    top: 47%;
+    width: 40rem;
+    height: 15rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .intro-background {
+    padding: 10rem 0;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
